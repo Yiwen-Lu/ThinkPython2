@@ -9,5 +9,5 @@ if __name__ == '__main__':
 	discount = 0.40
 	copy_num = 60
 	cost = wholesale_cost(cover_price, discount, copy_num)
-	print("the wholesale cost for {} copies is {:.2f}"
+	print("the wholesale cost for {} copies is ${:.2f}"
 				.format(copy_num, cost))
