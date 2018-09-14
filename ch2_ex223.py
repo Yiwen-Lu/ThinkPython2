@@ -6,7 +6,7 @@ def pace(min_per_mile):
 	v = int(minute) + int(second) / 60
 	return v
 
-def conver_to_time(durantion):
+def convert_time(durantion):
 	hh = durantion // 60
 	mm = round(durantion % 60)
 	return hh, mm
@@ -17,7 +17,7 @@ def running_time(v, s):
 def return_time(start_time, v, s):
 	start_hh, start_mm = str(start_time).split(':')
 	durantion = running_time(v, s)
-	add_hh, add_mm = conver_to_time(durantion)
+	add_hh, add_mm = convert_time(durantion)
 	end_hh = int(start_hh) + add_hh
 	end_mm = int(start_mm) + add_mm
 	if end_mm >= 60:
