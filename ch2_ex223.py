@@ -9,7 +9,7 @@ def pace(min_per_mile):
 def convert_time(durantion):
 	hh = durantion // 60
 	mm = round(durantion % 60)
-	return hh, mm
+	return int(hh), int(mm)
 
 def running_time(v, s):
 	return np.sum(v * s)
@@ -23,7 +23,11 @@ def return_time(start_time, v, s):
 	if end_mm >= 60:
 		end_hh = end_hh + 1
 		end_mm = end_mm - 60
-	end_time = str(int(end_hh)) + ":" + str(int(end_mm))
+
+	# check if too late for breakfast:
+	if end_hh >= 12:
+		raise ValueError('It is too late for breakfast.')
+	end_time = str(end_hh) + ":" + str(end_mm)
 	return end_time
 
 
