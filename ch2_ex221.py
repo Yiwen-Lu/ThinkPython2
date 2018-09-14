@@ -2,8 +2,8 @@
 import math
 
 def volume(r):
-	return 4/3 * math.pie * r**3
+	return 4/3 * math.pi * r**3
 
 if __name__ == "__main__":
     radius = 5
-    print("the volume of a sphere with radius 5 is {.4f}".format(volume(radius)))
+    print("the volume of a sphere with radius 5 is %d" % volume(radius))
