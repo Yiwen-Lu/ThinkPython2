@@ -4,7 +4,7 @@ def convert_time(minutes, seconds):
 	#ss = seconds % 60
 	mm = minutes + seconds // 60
 	hh = minutes // 60
-	return hh, mm
+	return int(hh), int(mm)
 
 
 def back_time(start_time, speeds, miles):
@@ -25,7 +25,11 @@ def back_time(start_time, speeds, miles):
 		back_hh += 1
 		back_mm -= 60
 
-	return str(int(back_hh)) + ":" + str(int(back_mm))
+	# check if too late for breakfast:
+	if back_hh >= 12:
+		raise ValueError('It is too late for breakfast.')	
+	
+	return str(back_hh) + ":" + str(back_mm)
 
 
 if __name__ == '__main__':
