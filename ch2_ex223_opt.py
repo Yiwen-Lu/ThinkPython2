@@ -6,7 +6,6 @@ def convert_time(minutes, seconds):
 	hh = minutes // 60
 	return int(hh), int(mm)
 
-
 def back_time(start_time, speeds, miles):
 	start_hh, start_mm = str(start_time).split(':')
 	total_min, total_sec = 0, 0
